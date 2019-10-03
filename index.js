@@ -2,7 +2,7 @@ const fs = require('fs');
 const file = fs.createWriteStream('numList.txt');
 
 
-function readFile() {
+function createFile() {
   file.on('error', function(err) { /* error handling */ });
   file.write("124");
   file.write("\n");
