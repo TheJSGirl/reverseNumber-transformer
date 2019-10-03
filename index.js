@@ -9,3 +9,14 @@ function reverseNum(num) {
   }
   return newNum;
 }
+
+function reverseArrayOfNum(arr){
+  let newArray = [];
+  arr.forEach(e => {
+    newArray.push(reverseNum(e));
+  });
+  return newArray;
+}
+
+let arr = [123, 345, 678, 444];
+console.log(reverseArrayOfNum(arr));
