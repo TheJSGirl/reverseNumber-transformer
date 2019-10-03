@@ -1,19 +1,11 @@
-const fs = require('fs');
-const file = fs.createWriteStream('numList.txt');
 
-
-function createFile() {
-  file.on('error', function(err) { /* error handling */ });
-  file.write("124");
-  file.write("\n");
-  file.write("4567");
-  file.write("\n");
-  file.write("234");
-  file.write("\n");
-  file.write("545");
-  file.write("\n");
-  file.write("678");
-  file.end();
+function reverseNum(num) {
+  let reverseNum;
+  let newNum = 0;
+  while(num>0) {
+    reverseNum = num%10;
+    newNum = newNum*10 + reverseNum;
+    num = Math.floor(num/10);
+  }
+  return newNum;
 }
-
-readFile();
